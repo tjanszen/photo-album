@@ -23,7 +23,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node server/index.js",
-    "localstart": "MONGO_URL=mongodb://localhost/hapi-prototype PORT=3333 nodemon -e js,jade server/index.js",
+    "localstart": "MONGO_URL=mongodb://localhost/album PORT=3333 nodemon -e js,jade server/index.js",
     "clean": "rm -rf node_modules && rm -rf public && npm install && bower install && gulp build",
     "postinstall": "bower install && gulp build"
   },
