@@ -5,10 +5,10 @@ block content
   
   form(method='get', action='/albums')
     .form-group
-      label Display
-      select#order
-        option Asc
-        otpion Dec
+      select#order-form.form-control(name='order' onchange='submit()')
+        option(value='') Sort
+        option Ascending
+        option Descending
   
   .row  
     each album in albums
