@@ -1,0 +1,9 @@
+extends ../../layouts/master
+block content
+  
+  h1= album.name
+  
+  h2= album.date
+  
+  each photo in album.photos
+    img(src=photo)

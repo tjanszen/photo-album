@@ -29,6 +29,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "async": "^0.9.0",
+    "aws-sdk": "^2.1.13",
     "good": "^5.1.1",
     "good-console": "^4.1.0",
     "hapi": "^8.2.0",
