@@ -3,12 +3,17 @@ block content
   h3 New Album
   a.btn.btn-default(href='/albums') Back
   
-  form(method='post', action='/albums', enctype='multipart/form-data')
-    label Name
-    input(type='text', name='name')
-    label Date
-    input(type='date', name='date')
-    label Photos
-    input(type='file', name='photos', multiple=true)
-    button.btn.btn-default(type='submit') Add
+  .row
+    .col-xs-4
+      form(method='post', action='/albums', enctype='multipart/form-data')
+        .form-group
+          label Name
+          input.form-control(type='text', name='name')
+        .form-group
+          label Date
+          input(type='date', name='date')
+        .form-group
+          label Photos
+          input(type='file', name='photos', multiple=true)
+        button.btn.btn-default(type='submit') Add
     

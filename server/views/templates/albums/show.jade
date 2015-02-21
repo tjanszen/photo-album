@@ -1,9 +1,18 @@
 extends ../../layouts/master
 block content
   
-  h1= album.name
-  
-  h2= album.date
-  
-  each photo in album.photos
-    img(src=photo)
+  .row.button-row
+      button.btn.btn-default
+        a(href='/albums')
+          span.glyphicon.glyphicon-chevron-left
+      form.trash-form(method='post', action='/albums/#{album._id}/delete')
+        button(type='submit').btn.btn-default
+          i.fa.fa-trash-o
+      //- a.btn.btn-default(href='/apartments/#{apartment._id}/edit')
+      //-   span.glyphicon.glyphicon-pencil
+
+  .row
+    .col-xs-4.col-sm-4.show-photo
+      h3 #{album.name}
+      each photo in album.photos
+        img#fuck(src=photo)

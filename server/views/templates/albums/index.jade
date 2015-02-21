@@ -2,3 +2,12 @@ extends ../../layouts/master
 block content
   h3 Albums
   a.btn.btn-default(href='/albums/new') Add New
+  
+  each album in albums
+    .row
+      .col-xs-4
+        .panel.panel-default
+          .panel-heading= album.name
+          .panel-body= album.date
+            a(href='albums/#{album._id}')
+              h3= album.name
