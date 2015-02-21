@@ -3,11 +3,19 @@ block content
   h3 Albums
   a.btn.btn-default(href='/albums/new') Add New
   
-  each album in albums
-    .row
+  form(method='get', action='/albums')
+    .form-group
+      label Display
+      select#order
+        option Asc
+        otpion Dec
+  
+  .row  
+    each album in albums
       .col-xs-4
         .panel.panel-default
           .panel-heading= album.name
           .panel-body= album.date
             a(href='albums/#{album._id}')
               h3= album.name
+              img(src=album.photos[0])

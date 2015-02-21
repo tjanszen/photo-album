@@ -1,0 +1,18 @@
+extends ../../layouts/master
+block content
+  h3= album.name
+  .row.button-row
+    button.btn.btn-default
+      a(href='/albums/#{album._id}')
+        span.glyphicon.glyphicon-chevron-left
+  
+  .row
+    .col-xs-4
+      form(method='post', action='/albums/#{album._id}')
+        .form-group
+          label Name
+          input.form-control(value=album.name, type='text', name='name')
+        .form-group
+          label Date
+          input(value=album.date, type='date', name='date')
+        button.btn.btn-default(type='submit') Update

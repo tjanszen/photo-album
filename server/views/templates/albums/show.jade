@@ -8,8 +8,8 @@ block content
       form.trash-form(method='post', action='/albums/#{album._id}/delete')
         button(type='submit').btn.btn-default
           i.fa.fa-trash-o
-      //- a.btn.btn-default(href='/apartments/#{apartment._id}/edit')
-      //-   span.glyphicon.glyphicon-pencil
+      a.btn.btn-default(href='/albums/#{album._id}/edit')
+        span.glyphicon.glyphicon-pencil
 
   .row
     .col-xs-4.col-sm-4.show-photo
